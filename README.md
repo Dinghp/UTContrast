@@ -1,4 +1,4 @@
-# UTContrast
+<img width="788" height="342" alt="image" src="https://github.com/user-attachments/assets/a12d9fd1-2138-401b-bc63-711c193147a8" /># UTContrast
 Official PyTorch implementation of the paper UTContrast: Decoupled Two-Path Contrastive Learning with Uncertainty-aware for Medical Image Segmentation
 ## Architecture
 <img width="1252" height="631" alt="image" src="https://github.com/user-attachments/assets/04906dfd-4ff1-46e6-8c20-97cb03b750f0" />
@@ -30,6 +30,7 @@ Checkpoints for UTContrast(RWKV-UNet) can be downloaded at (https://drive.google
 
 ## Acknowledgements
 This code base uses certain code blocks and helper functions from [RWKV-UNet](https://github.com/juntaoJianggavin/RWKV-UNet) and [ConDSeg](https://github.com/Mengqi-Lei/ConDSeg).
+'''
 @inproceedings{lei2025condseg,
   title={ConDSeg: A General Medical Image Segmentation Framework via Contrast-Driven Feature Enhancement},
   author={Lei, Mengqi and Wu, Haochen and Lv, Xinhua and Wang, Xin},
@@ -38,4 +39,4 @@ This code base uses certain code blocks and helper functions from [RWKV-UNet](ht
   number={5},
   pages={4571--4579},
   year={2025}
-}
+}'''
