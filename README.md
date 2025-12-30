@@ -7,4 +7,4 @@ Official PyTorch implementation of the paper UTContrast: Decoupled Two-Path Cont
 # Download weights:
 Pretrained weights for the encoder(RWKV-UNet) can be downloaded at (https://drive.google.com/drive/folders/1odF_NK5wYRkE0C3w9eoLUQEVbxefj66e?usp=sharing).
 
-Checkpoints for RWKV-UNet_duibi can be downloaded at (https://drive.google.com/drive/folders/19y_8Mzmw5u6Bg-iVfmh6-vRCBDdy149_?usp=sharing).
+Checkpoints for UTContrast(RWKV-UNet) can be downloaded at (https://drive.google.com/drive/folders/19y_8Mzmw5u6Bg-iVfmh6-vRCBDdy149_?usp=sharing).
