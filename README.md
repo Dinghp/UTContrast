@@ -1,4 +1,4 @@
-<img width="788" height="342" alt="image" src="https://github.com/user-attachments/assets/a12d9fd1-2138-401b-bc63-711c193147a8" /># UTContrast
+# UTContrast
 Official PyTorch implementation of the paper UTContrast: Decoupled Two-Path Contrastive Learning with Uncertainty-aware for Medical Image Segmentation
 ## Architecture
 <img width="1252" height="631" alt="image" src="https://github.com/user-attachments/assets/04906dfd-4ff1-46e6-8c20-97cb03b750f0" />
