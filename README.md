@@ -1,5 +1,7 @@
 # UTContrast
 Official PyTorch implementation of the paper UTContrast: Decoupled Two-Path Contrastive Learning with Uncertainty-aware for Medical Image Segmentation
+<img width="1252" height="631" alt="image" src="https://github.com/user-attachments/assets/04906dfd-4ff1-46e6-8c20-97cb03b750f0" />
+
 # Data preparation:
 ## Binary Segmentation
 • To verify the performance and general applicability of our UTContrast in the field of medical image segmentation, we conducted experiments on six challenging public datasets: Kvasir-SEG, Kvasir-Sessile, GlaS, ISIC-2016, and ISIC-2017, covering subdivision tasks across three modalities.
