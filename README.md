@@ -23,7 +23,7 @@ validation, and testing.
 # Download weights:
 Pretrained weights for the encoder(RWKV-UNet) can be downloaded at (https://drive.google.com/drive/folders/1odF_NK5wYRkE0C3w9eoLUQEVbxefj66e?usp=sharing).
 
-Checkpoints for UTContrast(RWKV-UNet) can be downloaded at (https://drive.google.com/drive/folders/19y_8Mzmw5u6Bg-iVfmh6-vRCBDdy149_?usp=sharing).
+Checkpoints for UTContrast(RWKV-UNet) can be downloaded at (https://drive.google.com/file/d/1wxorQrdlgf6DLx4uUufbb8nNXO94vRcQ/view?usp=sharing).
 
 # Acknowledgements
 This code base uses certain code blocks and helper functions from [RWKV-UNet](https://github.com/juntaoJianggavin/RWKV-UNet) and [ConDSeg](https://github.com/Mengqi-Lei/ConDSeg).
