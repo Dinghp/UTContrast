@@ -31,8 +31,27 @@ Checkpoints for UTContrast(RWKV-UNet) can be downloaded at (https://drive.google
 ## Acknowledgements
 This code base uses certain code blocks and helper functions from [RWKV-UNet](https://github.com/juntaoJianggavin/RWKV-UNet) and [ConDSeg](https://github.com/Mengqi-Lei/ConDSeg).
 # Cite our work📝
-<div style="border: 1px solid #e1e4e8; border-radius: 6px; padding: 16px; margin: 10px 0; background-color: #f6f8fa; overflow-x: auto;">
-  <pre style="margin: 0; font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace; font-size: 14px; line-height: 1.5; color: #24292e;">
+<div style="position: relative; overflow: auto; max-height: 200px; border: 1px solid #ddd; border-radius: 6px; padding: 12px; background-color: #f6f8fa; margin: 10px 0;">
+  <!-- Copy Button -->
+  <button 
+    style="
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background: none;
+      border: none;
+      color: #0366d6;
+      cursor: pointer;
+      font-size: 14px;
+      padding: 4px;
+    "
+    onclick="navigator.clipboard.writeText(document.getElementById('code-block').textContent.trim())"
+    title="Copy to clipboard"
+  >
+    📋 Copy
+  </button>
+  <!-- Code Content -->
+  <pre id="code-block" style="margin: 0; white-space: pre-wrap; font-family: monospace; font-size: 14px;"><code>
 @inproceedings{lei2025condseg,
   title={ConDSeg: A General Medical Image Segmentation Framework via Contrast-Driven Feature Enhancement},
   author={Lei, Mengqi and Wu, Haochen and Lv, Xinhua and Wang, Xin},
