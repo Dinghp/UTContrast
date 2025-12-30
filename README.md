@@ -60,6 +60,4 @@ This code base uses certain code blocks and helper functions from [RWKV-UNet](ht
   number={5},
   pages={4571--4579},
   year={2025}
-}</pre>
-</div>
 
