@@ -30,4 +30,33 @@ Checkpoints for UTContrast(RWKV-UNet) can be downloaded at (https://drive.google
 
 ## Acknowledgements
 This code base uses certain code blocks and helper functions from [RWKV-UNet](https://github.com/juntaoJianggavin/RWKV-UNet) and [ConDSeg](https://github.com/Mengqi-Lei/ConDSeg).
-print("Hello, World!")
+<div style="position: relative; overflow: auto; max-height: 400px; border: 1px solid #ddd; border-radius: 6px; padding: 12px; background-color: #f6f8fa;">
+  <!-- 复制按钮 -->
+  <button 
+    style="
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background: none;
+      border: none;
+      color: #0366d6;
+      cursor: pointer;
+      font-size: 14px;
+    "
+    onclick="navigator.clipboard.writeText(document.getElementById('code-block').textContent.trim())"
+    title="Copy to clipboard"
+  >
+    📋
+  </button>
+  <!-- 代码内容（用 pre 标签保留格式） -->
+  <pre id="code-block" style="margin: 0; white-space: pre-wrap;"><code>
+conda create -n emcadenv python=3.8
+conda activate emcadenv
+
+pip install torch==1.11.0+cu113 torchvision==0.12.0+cu113 torchaudio==0.11.0 --extra-index-url https://download.pytorch.org/whl/cu113
+
+pip install mmcv-full -f https://download.openmmlab.com/mmcv/dist/cu113/torch1.11.0/index.html
+
+pip install -r requirements.txt
+  </code></pre>
+</div>
