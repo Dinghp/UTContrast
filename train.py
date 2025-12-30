@@ -12,7 +12,7 @@ from rwkv_duibi import RWKV_UNet
 from trainer_duibi import trainer_synapse, trainer_acdc
 parser = argparse.ArgumentParser()
 parser.add_argument('--root_path', type=str,
-                    default=r'D:\ACDC\G-CASCADE-main\data\synapse\train_npz', help='root dir for data')
+                    default=r'./data/Synapse/train_npz', help='root dir for data')
 parser.add_argument('--dataset', type=str,
                     default='Synapse', help='experiment_name')
 parser.add_argument('--list_dir', type=str,
