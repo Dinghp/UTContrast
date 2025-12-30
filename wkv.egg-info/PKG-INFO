@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: wkv
+Version: 0.1
+Summary: RWKV WKV CUDA Operator
+Author: User
+License-File: LICENSE
+Dynamic: author
+Dynamic: license-file
+Dynamic: summary
