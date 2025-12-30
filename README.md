@@ -3,7 +3,7 @@ Official PyTorch implementation of the paper UTContrast: Decoupled Two-Path Cont
 ## Architecture
 <img width="1252" height="631" alt="image" src="https://github.com/user-attachments/assets/04906dfd-4ff1-46e6-8c20-97cb03b750f0" />
 
-## Data preparation
+## Data preparation📚
 ### Binary Segmentation
 • To verify the performance and general applicability of our UTContrast in the field of medical image segmentation, we conducted experiments on six challenging public datasets: Kvasir-SEG, Kvasir-Sessile, GlaS, ISIC-2016, and ISIC-2017, covering subdivision tasks across three modalities.
 ### Detailed information of the six datasets.
@@ -31,4 +31,16 @@ Checkpoints for UTContrast(RWKV-UNet) can be downloaded at (https://drive.google
 ## Acknowledgements
 This code base uses certain code blocks and helper functions from [RWKV-UNet](https://github.com/juntaoJianggavin/RWKV-UNet) and [ConDSeg](https://github.com/Mengqi-Lei/ConDSeg).
 # Cite our work📝
+<div style="border: 1px solid #e1e4e8; border-radius: 6px; padding: 16px; margin: 10px 0; background-color: #f6f8fa; overflow-x: auto;">
+  <pre style="margin: 0; font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace; font-size: 14px; line-height: 1.5; color: #24292e;">
+@inproceedings{lei2025condseg,
+  title={ConDSeg: A General Medical Image Segmentation Framework via Contrast-Driven Feature Enhancement},
+  author={Lei, Mengqi and Wu, Haochen and Lv, Xinhua and Wang, Xin},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={39},
+  number={5},
+  pages={4571--4579},
+  year={2025}
+}</pre>
+</div>
 
