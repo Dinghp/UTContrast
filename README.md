@@ -48,7 +48,6 @@ This code base uses certain code blocks and helper functions from [RWKV-UNet](ht
     onclick="navigator.clipboard.writeText(document.getElementById('code-block').textContent.trim())"
     title="Copy to clipboard"
   >
-    📋 Copy
   </button>
   <!-- Code Content -->
   <pre id="code-block" style="margin: 0; white-space: pre-wrap; font-family: monospace; font-size: 14px;"><code>
