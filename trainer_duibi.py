@@ -130,21 +130,17 @@ class MultiClassUncertaintyContrastiveLoss(nn.Module):
 
         target = target.squeeze(1) if target.dim() == 4 else target
 
-        # 上采样不确定掩码
         uc_mask = F.interpolate(uc_mask_low_res.float(),
                                 size=target.shape[-2:],
                                 mode='bilinear',
                                 align_corners=False) > 0.5
 
-        # 多分类概率计算
         pred_prob = torch.softmax(pred, dim=1)
-        #
-        # # 基于熵的权重计算
+
         entropy = -torch.sum(pred_prob * torch.log(pred_prob + 1e-10), dim=1)
         difficulty_weights = entropy / torch.log(torch.tensor(self.num_classes,
                                                               device=entropy.device))
 
-        # 样本选择
         masked_weights = difficulty_weights * uc_mask.squeeze(1).float()
         low_conf = torch.zeros_like(uc_mask, dtype=torch.bool)
 
@@ -206,7 +202,7 @@ from trainer_SCCL_BASE import *
 
 
 def trainer_synapse(args, model, snapshot_path, contrasive_fn=MultiClassUncertaintyContrastiveLoss(),
-                    contrasive_fn1=SCCL1(temperature=0.1, num_positives=10, num_negatives=10, sample_ratio=0.25,
+                    contrasive_fn1=SCCL(temperature=0.1, num_positives=10, num_negatives=10, sample_ratio=0.25,
                                          ignore_class=0)):
     from datasets.dataset_synapse import Synapse_dataset, RandomGenerator
     logging.basicConfig(filename=snapshot_path + "/log.txt", level=logging.INFO,
@@ -256,13 +252,12 @@ def trainer_synapse(args, model, snapshot_path, contrasive_fn=MultiClassUncertai
 
             loss_mask = loss1 + 0.4 * loss2 + 0.4 * loss3
 
-            foreground_prob = torch.max(fg_pred[:, 1:9, :, :], dim=1)[0]  # 形状 [B, H, W]
-            # 2. 背景概率（直接取第0类）
-            background_prob = fg_pred[:, 0, :, :]  # 形状 [B, H, W]
-            # 3. 拼接背景和前景概率
-            combined = torch.stack([background_prob, foreground_prob], dim=1)  # 形状 [B, 2, H, W]
-            # 4. Softmax归一化
-            final_probs = F.softmax(combined, dim=1)  # 形状 [B, 2, H, W]
+            foreground_prob = torch.max(fg_pred[:, 1:9, :, :], dim=1)[0]  # [B, H, W]
+    
+            background_prob = fg_pred[:, 0, :, :]  # [B, H, W]
+            combined = torch.stack([background_prob, foreground_prob], dim=1)  # [B, 2, H, W]
+
+            final_probs = F.softmax(combined, dim=1)  #  [B, 2, H, W]
             preds = torch.stack(
                 [final_probs[:, 1, :, :].unsqueeze(1), final_probs[:, 0, :, :].unsqueeze(1), torch.sigmoid(uc_pred)],
                 dim=1)
@@ -316,7 +311,6 @@ def trainer_synapse(args, model, snapshot_path, contrasive_fn=MultiClassUncertai
                 writer.add_image('train/GroundTruth', labs, iter_num)
         scheduler.step()
         save_interval = 50  # int(max_epoch/6)
-        save_interval = 1
         if epoch_num > int(max_epoch / 2) and (epoch_num + 1) % save_interval == 0:
             save_mode_path = os.path.join(snapshot_path, 'epoch_' + str(epoch_num) + '.pth')
             torch.save(model.state_dict(), save_mode_path)
@@ -331,3 +325,4 @@ def trainer_synapse(args, model, snapshot_path, contrasive_fn=MultiClassUncertai
 
     writer.close()
     return "Training Finished!"
+
