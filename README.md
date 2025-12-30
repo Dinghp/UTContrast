@@ -30,3 +30,12 @@ Checkpoints for UTContrast(RWKV-UNet) can be downloaded at (https://drive.google
 
 ## Acknowledgements
 This code base uses certain code blocks and helper functions from [RWKV-UNet](https://github.com/juntaoJianggavin/RWKV-UNet) and [ConDSeg](https://github.com/Mengqi-Lei/ConDSeg).
+@inproceedings{lei2025condseg,
+  title={ConDSeg: A General Medical Image Segmentation Framework via Contrast-Driven Feature Enhancement},
+  author={Lei, Mengqi and Wu, Haochen and Lv, Xinhua and Wang, Xin},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={39},
+  number={5},
+  pages={4571--4579},
+  year={2025}
+}
